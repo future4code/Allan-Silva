@@ -66,6 +66,10 @@ div img {
   *
   **/
 
+#p-home {
+    padding-top: 80px;
+}
+
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
