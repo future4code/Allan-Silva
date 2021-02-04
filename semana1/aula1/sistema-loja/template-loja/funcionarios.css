@@ -12,14 +12,28 @@ body {
     background-size: cover;
 }
 
-.title {
-    background-color: #333;
-    color: rgba(255, 255, 255, 0.918);
-    padding: 5px;
-    font-size: 25px;
-    text-shadow: 2px 2px 5px black;
+.container-title {
     text-align: center;
+    background-color: #333;
     border-bottom: 5px solid #5CE1E6;
+}
+
+#title {
+    margin: 0;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px black;
+    padding-top: 20px;
+    color: rgba(255, 255, 255, 0.918);
+}
+
+#form {
+    margin-left: 85%;
+    font-size: 16px;
+}
+
+.btn-form {
+    height: 16px;
+    width: 90px;
 }
 
 #container-box {
@@ -33,7 +47,7 @@ body {
     text-align: center;
 }
 
-.btn-home, .btn-add, .btn-ctrl, .btn-employee {
+.btn-home, .btn-add, .btn-ctrl, .btn-employee, .btn-form {
     text-align: center;
     background-color: #5CE1E6;
     display: inline-block;
@@ -79,7 +93,9 @@ body {
 
 #employee {
     text-align: center;
-    margin: 20px 20px 20px 520px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 150px;
     width: 260px;
     height: 250px;
     background-color: #333;
