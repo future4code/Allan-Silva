@@ -116,6 +116,9 @@ td button {
 
 
 #back-button {
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
     background-color: white;
     width: 100px;
     height: 20px;
