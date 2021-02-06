@@ -7,11 +7,11 @@ html, body {
 
 body {
     font-family: 'Josefin Sans', sans-serif;
-    background-color: rgb(71, 71, 71);
+    /* background-color: rgb(71, 71, 71); */
 }
 
 header {
-    background-color: #333;
+    /* background-color: #333; */
     border-bottom: 4px solid #FF5757;
     box-shadow: 0 1px 10px black;
 }
@@ -27,16 +27,16 @@ header {
 a {
     margin: 10px 10px;
     font-size: 25px;
-    color: white;
+    color: #FF5757;
     text-decoration: none;
 }
 
 a:active {
-    color: #FF5757;
+    background-color: #f3f3f3;
 }
 
 a:hover {
-    background-color: rgb(71, 71, 71);
+    color: #ff0000;
 }
 
 #theme {
@@ -48,16 +48,33 @@ a:hover {
 
 #logo {
     position: absolute;
-    margin: 20px 0 0 20px;
+    margin: 25px 0 0 20px;
     width: 50px;
     height: 50px;
     border-radius: 60px;
 }
 
-h1:first-of-type {
+#name {
     display: inline-block;
     text-align: center;
-    color: white;
+    color: #FF5757;
     margin: 35px 0 35px 85px;
     text-shadow: 1px 1px 2px white;
+}
+
+
+footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    border-top: 4px solid #FF5757;
+    box-shadow: 0 1px 10px black;
+}
+
+#photo {
+    width: 107px;
+    height: 130px;
+    border-radius: 60px;
 }
