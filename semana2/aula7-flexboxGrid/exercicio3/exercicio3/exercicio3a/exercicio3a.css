@@ -54,6 +54,10 @@ body {
     width: 550px;
 }
 
+#vertical-middle-container {
+    width: 300px;
+}
+
 .red-background {
     background-color: red;
     height: 90px;
