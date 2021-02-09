@@ -48,44 +48,32 @@ header {
     width: 30px;
 }
 
-#search {
-    display: flex;
-    align-self: center;
-    height: 30px;
-    width: 100px;
-    padding: 0 0 0 5px;
-    border: none;
-    color: rgba(177, 177, 177, 0.575);
-}
-
 .card-video {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    box-shadow: 2px 2px 5px darkgray;
-    text-align: center;
-    padding: 10px 0;
 }
 
 main {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 8px;
-    column-gap: 8px;
-    margin: 8px
+}
+
+h2 {
+    color: #333;
+    font-size: 40px;
+    margin: 30px 30px;
+}
+
+video {
+    margin: 20px 0;
+    width: 900px;
+    border-radius: 10px;
 }
 
 #main-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 1fr 60px;
-    min-height: 100vh;
-}
-
-img {
-    width: 250px;
-    height: 180px;
+    grid-template-rows: 60px;
 }
 
 footer {

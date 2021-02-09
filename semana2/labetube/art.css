@@ -29,6 +29,10 @@ header {
     justify-content: space-between;
 }
 
+#container-input {
+    display: flex;
+}
+
 #search {
     display: flex;
     align-self: center;
@@ -39,6 +43,10 @@ header {
     color: rgba(177, 177, 177, 0.575);
 }
 
+#img {
+    height: 30px;
+    width: 30px;
+}
 
 .card-video {
     display: flex;
@@ -48,14 +56,24 @@ header {
 
 main {
     display: grid;
+}
 
+h2 {
+    color: #333;
+    font-size: 40px;
+    margin: 30px 30px;
+}
+
+video {
+    margin: 20px 0;
+    width: 900px;
+    border-radius: 10px;
 }
 
 #main-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 1fr 60px;
-    min-height: 100vh;
+    grid-template-rows: 60px;
 }
 
 footer {
