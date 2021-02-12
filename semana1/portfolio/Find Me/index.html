@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="pageOne">
+    <div class="container-logoBox">
+        <div class="logo-box">
+            <img src="./Imagem/find-logo.png" alt="">
+        </div>
+        <div class="first-page">
+            <input id="userName" class="question-input" type="text" value="" placeholder="Digite Seu Nome...">
+            <button  id="btn-name" onclick="getName('pageTwo','pageOne')">OK</button>
+        </div>
+        <p id="description">Neste minigame iremos ver imagens onde teremos que descobrir suas devidas localizações apenas as
+        observando e através de sua intuição ao ver a vegetação , construções ou monumentos do ambiente.</p>
+    </div>
+</div>
+
+<div id="pageTwo">
+    <div class="container-text">
+        <div class="option">
+            <h1>Que os jogos comecem!</h1>
+            <p id="player"></p>
+            <button class="btn" id="btnCountries" onclick="move('countriesOne', 'pageTwo')">Países</button>
+            <button class="btn" id="btnMonuments" onclick="move('monumentsOne' , 'pageTwo')">Monumentos</button>
+            <button class="btn" id="btnBack" onclick="move('pageOne' , 'pageTwo')">Voltar</button>
+        </div>
+        
+    </div>
+</div>
+<div id="countries">
+    <div id="countriesOne">
+        <div class="conteiner-country">
+            <div class="questionOne-country">
+                <h1>Descubra Onde você esta?</h1>
+                <p>INGLATERRA</p>
+                <img src="./Imagem/Sem título.png" id="btn-england" onclick="move('countriesTwo', 'countriesOne')">
+            </div>
+        </div>
+        <p id="text-peru">PERU</p>
+        <img src="./Imagem/downloa2d.png" id="btn-peru" onclick="move('countriesTwo', 'countriesOne')">
+        <p id="text-france">FRANÇA</p>
+        <img src="./Imagem/OPA.png" id="btn-france" onclick="move('countriesTwo', 'countriesOne')">
+    </div>
+    <div id="countriesTwo">
+        <div class="conteiner-country">
+            <div class="questionOne-country">
+                <h1>Descubra Onde você esta?</h1>
+                <p>GROELÂNDIA</p>
+                <img src="./Imagem/GROELANDIA.png" id="btn-greenland" onclick="move('countriesThree', 'countriesTwo')">
+            </div>
+        </div>
+        <p id="text-newZealand">NOVA ZELÂNDIA</p>
+        <img src="./Imagem/NOVA ZELANDIA.png" id="btn-newZealand" onclick="move('countriesThree', 'countriesTwo')">
+        <p id="text-russia">RUSSIA</p>
+        <img src="./Imagem/RUSSIA.png" id="btn-russia" onclick="move('countriesThree', 'countriesTwo') ">
+    </div>
+    <div id="countriesThree">
+        <div class="conteiner-country">
+            <div class="questionOne-country">
+                <h1>Descubra Onde você esta?</h1>
+                <p>EGITO</p>
+                <img src="./Imagem/EGITO.png" id="btn-egypt" onclick="move('finishPage', 'countriesThree')">
+            </div>
+        </div>
+        <p id="text-morocco">MARROCOS</p>
+         <img src="./Imagem/MARROCOS.png" id="btn-morocco" onclick="move('finishPage', 'countriesThree')">
+        <p id="text-india">ÍNDIA</p>
+        <img src="./Imagem/INDIA.png" id="btn-india" onclick="move('finishPage', 'countriesThree')">
+    </div>
+</div>
+
+<div id="monuments">
+    <div id="monumentsOne">
+        <div class="conteiner-monuments">
+            <div class="questionOne-monuments">
+                <div id="monumentQuestionOne">
+                    <form name="monumentQuestionOne">
+                        <h1>Descubra Onde você esta?</h1>
+                        <input type="radio" id="acropole" name="monumentOne" value="acropole">
+                        <label for="acropole">Acrópole</label>
+                        <br>
+                        <input type="radio" id="cristo-redentor" name="monumentOne" value="cristo-redentor">
+                        <label for="cristo-redentor">Cristo Redentor</label>
+                        <br>
+                        <input type="radio" id="duomo" name="monumentOne" value="duomo">
+                        <label for="duomo">Duomo</label>
+                    </form>
+                </div>
+                <button id="buttonMonumentOne" onclick="move('monumentsTwo','monumentsOne'), monumentAnswerOne()">OK!</button>
+            </div>
+            <div>
+                <p id="informationMonumentOne">A **** mais famosa da **** abriga também algumas das construções mais importantes domundo antigo,
+                 como o Partenon e o Erecteion.</p>
+            </div>
+        </div>
+    </div>
+    <div id="monumentsTwo">
+        <div class="conteiner-monuments">
+            <div class="questionOne-monuments">
+                <div id="monumentQuestionOne">
+                    <form name="monumentQuestionTwo">
+                        <h1>Descubra Onde você esta?</h1>
+                        <input type="radio" id="taj-mahal" name="monumentTwo" value="taj-mahal">
+                        <label for="taj-mahal">Taj Mahal</label>
+                        <br>
+                        <input type="radio" id="machu-picch" name="monumentTwo" value="machu-picch">
+                        <label for="machu-picch">Machu Picchu</label>
+                        <br>
+                        <input type="radio" id="coliseu" name="monumentTwo" value="coliseu">
+                        <label for="coliseu">Coliseu</label>
+                    </form>
+                </div>
+                <button id="buttonMonumentTwo" onclick="move('monumentsThree','monumentsTwo'), monumentAnswerTwo()">OK!</button>
+            </div>
+            <div>
+                <p id="informationMonumenTwo">Construído na **** Antiga, este monumento histórico está entre os mais visitados do mundo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="questionOne-monuments">
+        <form name="monumentQuestionThree">
+            <h1>Descubra Onde você esta?</h1>
+            <input type="radio" id="big-ben" name="monumentThree" value="big-ben">
+            <label for="big-ben">Big Ben</label>
+            <br>
+            <input type="radio" id="empire-state-building" name="monumentThree" value="empire-state-building">
+            <label for="empire-state-building">Empire State Building</label>
+            <br>
+            <input type="radio" id="burj-khalifa" name="monumentThree" value="burj-khalifa">
+            <label for="burj-khalifa">Burj Khalifa</label>
+        </form>
+    </div> -->
+    <div id="monumentsThree">
+        <div class="conteiner-monuments">
+            <div class="questionOne-monuments">
+                <div id="monumentQuestionOne">
+                    <form name="monumentQuestionThree">
+                        <h1>Descubra Onde você esta?</h1>
+                        <input type="radio" id="big-ben" name="monumentThree" value="big-ben">
+                        <label for="big-ben">Big Ben</label>
+                        <br>
+                        <input type="radio" id="empire-state-building" name="monumentThree" value="empire-state-building">
+                        <label for="empire-state-building">Empire State Building</label>
+                        <br>
+                        <input type="radio" id="burj-khalifa" name="monumentThree" value="burj-khalifa">
+                        <label for="burj-khalifa">Burj Khalifa</label>
+                    </form>
+                </div>
+                <button id="buttonMonumentThree" onclick="move('finishPage','monumentsThree')" ,monumentAnswerThree()>OK!</button>
+            <div>
+                <p id="informationMonumenThree">Este é o maior edifício do mundo, com 828 metros de altura e 160 andares.</p>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="finishPage">
+        <div class="conteiner-monuments">
+
+        </div>
+    </div>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
