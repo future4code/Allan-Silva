@@ -38,29 +38,3 @@ const update = () => {
     document.getElementById("autor-post").value = "";
     document.getElementById("conteudo-post").value = "";
 }
-
-
-// let getTask = () => {
-//     let task = document.getElementById("tarefa").value;
-//     let day = document.getElementById("dias-semana").value;
-//     console.log("Valores: ", task, day)
-//     document.getElementById(day).innerHTML += "<p>- " + task + "</p>";
-//     document.getElementById("dias-semana").value = "domingo"
-//     document.getElementById("tarefa").value = "";
-// }
-
-// const adicionaValor = () => {
-//     let arrayDeDados = [];
-//     dadosDoPost = {
-//         titulo: tituloDoPost.value,
-//         autor: autorDoPost.value,
-//         conteudo: conteudoDoPost.value,
-//     }
-//     if (dadosDoPost.titulo !== "" && dadosDoPost.autor !== "" && dadosDoPost.conteudo !== "") {
-//         arrayDeDados.push(dadosDoPost);
-
-//     } else {
-//         alert("Preencha todos os dados!");
-//     }
-//     console.log(arrayDeDados);
-// }
