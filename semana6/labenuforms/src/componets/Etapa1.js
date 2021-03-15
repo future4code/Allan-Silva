@@ -1,8 +1,9 @@
 import React from 'react';
+import '../App.css'
 
 function Etapa1() {
     return (
-        <div >
+        <div className="App">
             <h2>ETAPA 1 - DADOS GERAIS</h2>
             <h3>1. Qual o seu nome?</h3>
             <input />

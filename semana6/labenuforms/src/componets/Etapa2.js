@@ -1,8 +1,9 @@
 import React from 'react';
+import '../App.css'
 
 function Etapa2() {
     return (
-        <div >
+        <div className="App">
             <h2>ETAPA 2 - INFORMAÇÕES DO ENSINO SUPERIOR</h2>
             <h3>5. Qual curso?</h3>
             <input />
