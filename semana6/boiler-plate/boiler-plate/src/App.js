@@ -31,11 +31,15 @@ class App extends React.Component {
     }
 
   componentDidUpdate() {
-
+    localStorage.setItem("Lista", JSON.stringify(this.state.tarefas))
   };
 
   componentDidMount() {
-
+    if (localStorage.getItem("Lista")) {
+      const listaString = localStorage.getItem("Lista")
+      const listaObjeto = JSON.parse(listaString)
+      this.setState({ tarefas: listaObjeto })
+    }
   };
 
   onChangeInput = (event) => {
@@ -61,6 +65,8 @@ class App extends React.Component {
           completa: !tarefa.completa
         }
         return novaTarefa
+      } else {
+        return tarefa
       }
     })
 
@@ -68,7 +74,7 @@ class App extends React.Component {
   }
 
   onChangeFilter = (event) => {
-    this.setState({ filter: event.target.value })
+    this.setState({ filtro: event.target.value })
   }
 
   render() {
