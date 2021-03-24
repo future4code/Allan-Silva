@@ -1,44 +1,47 @@
-import './App.css';
 import React from 'react';
-import styled from 'styled-components';
-// import axios from "axios";
+import Register from './components/Register/Register';
+import Lista from './components/Lista/Lista'
 
-const Container = styled.div `
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  justify-content: center:
-  align-items: center;
-  height: 100px;
-`
-
-const ContainerInput = styled.input `
-width: 250px;
-`
-
-const ContainerButton = styled.button `
-width: 60px;
-`
 
 export default class App extends React.Component {
+  state = {
+    page: 0
+  }
 
-  render() {
-    return (
-      <div>
-        <button>Ir para a lista</button>
-      <Container>
-        <label>
-          Nome:
-        </label>
-        <ContainerInput type='text' />
-        <label>
-          Email:
-        </label>
-        <ContainerInput type='email' />
-        <ContainerButton>Enviar</ContainerButton>
-      </Container>
-      </div>
-    );
-  };
+  changePage = () => {
+    if(this.state.page === 0) {
+      return <Register/>
+    } else if(this.state.page === 1) {
+      return <Lista />
+    }
+  }
+  
+  changeState = () => {
+    if (this.state.page === 0) {
+      this.setState({ page: 1 })
+    } else if (this.state.page === 1) {
+      this.setState({ page: 0 })
+    }
+  }
+
+  actionChange = () => {
+    switch (this.state.page) {
+      case 0:
+        return <button onClick={this.changeState}>Ir para a lista de Usuários</button>
+      case 1:
+        return <button onClick={this.changeState}>Ir para a página de Login</button>
+      default:
+        return
+    }
+  }
+
+render(){
+  
+  return(
+    <div>
+      {this.actionChange()}
+      {this.changePage()}
+    </div>
+  )
 }
-
+}
