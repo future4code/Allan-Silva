@@ -1,0 +1,519 @@
+html,body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.logo-box {
+    height: 150px;
+    width: 380px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.logo-box img {
+    height: 100%;
+    width: 100%;
+}
+
+#pageOne {
+    background-image: url(./Imagem/Design\ sem\ nome.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+#pageTwo {
+    background-image: url(./Imagem/Earth.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    height: 100%;
+}
+
+.container-text {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#description {
+    width: 320px;
+    height: 150px;
+    background-color: rgba(61, 7, 7, 0.178);
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-top: 40px;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.question-input {
+    height: 30px;
+    width: 280px;
+    padding-left: 13px;
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+#btn-name {
+    height: 30px;
+    width: 40px;
+    margin-bottom: 5px;
+    padding: center;
+    font-size: 15px;
+    border-radius: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#btn-name:hover {
+    cursor: pointer;
+    color: rgba(197, 197, 197, 0.562);
+}
+
+.option {
+    background-color: rgba(202, 202, 202, 0.445);
+    width: 330px;
+    height: 330px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    padding: 30px;
+    border-radius: 700px;
+}
+
+#player {
+    font-size: 15px;
+}
+
+.btn:hover {
+    cursor: pointer;
+
+}
+
+.btn {
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    font-size: 20px;
+    height: 110px;
+    width: 50px;
+}
+
+#btnCountries {
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width:60px;
+    height: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#btnMonuments {
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#btnBack {
+    color: rgb(255, 255, 255);
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+    width: 60px;
+    height: 30px;
+    padding-right: 45px;
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#countriesOne {
+    background-image: url(./Imagem/peru-cusco.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    height: 100%;
+}
+
+.conteiner-country,.conteiner-monuments {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.questionOne-country {
+    background-color: rgba(202, 202, 202, 0.445);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 300px;
+    height: 598px;
+    padding-top: 60px;
+    font-size: 25px;
+}
+
+#btn-peru {
+    z-index: 1;
+    position: absolute;
+    margin-top: -295px;
+    padding-left: 155px;
+    height: 250px;
+    width: 170px;
+    font-size: 30px;
+}
+
+#btn-peru:hover {
+    cursor: pointer;
+    height: 253px;
+    width: 173px;
+}
+
+#text-peru {
+    position: absolute;
+    margin-top: -375px;
+    margin-left: 186px;
+    font-size: 25px;
+    background-color: rgba(202, 202, 202, 0.637);
+    text-align: center;
+    padding-top: 5px;
+    width: 125px;
+    height: 27px;
+    border-radius: 10px;
+}
+
+#btn-england {
+    height: 310px;
+    width: 310px;
+}
+
+#btn-england:hover {
+    height: 313px;
+    width: 313px;
+    cursor: pointer;
+}
+
+#btn-france {
+    z-index: 1;
+    position: absolute;
+    margin-top: -298px;
+    margin-left: 920px;
+    height: 280px;
+    width: 280px;
+}
+
+#btn-france:hover {
+    height: 283px;
+    width: 283px;
+    cursor: pointer;
+}
+
+#text-france {
+    position: absolute;
+    margin-top: -375px;
+    margin-left: 987px;
+    font-size: 25px;
+    background-color: rgba(202, 202, 202, 0.637);
+    text-align: center;
+    padding-top: 5px;
+    width: 125px;
+    height: 27px;
+    border-radius: 10px;
+}
+
+#countriesTwo {
+    background-image: url(./Imagem/Nuuk-Groenlândia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+#btn-russia {
+    z-index: 1;
+    position: absolute;
+    margin-top: -290px;
+    margin-left: 890px;
+    height: 210px;
+    width: 350px;
+}
+
+#btn-russia:hover {
+    height: 213px;
+    width: 353px;
+    cursor: pointer;
+}
+
+#text-russia {
+    position: absolute;
+    margin-top: -375px;
+    margin-left: 987px;
+    font-size: 25px;
+    background-color: rgba(202, 202, 202, 0.637);
+    text-align: center;
+    padding-top: 5px;
+    width: 125px;
+    height: 27px;
+    border-radius: 10px;
+}
+
+#btn-newZealand {
+    z-index: 1;
+    position: absolute;
+    margin-top: -295px;
+    padding-left: 155px;
+    height: 260px;
+    width: 180px;
+    font-size: 30px;
+}
+
+#btn-newZealand:hover {
+    cursor: pointer;
+    height: 263px;
+    width: 183px;
+}
+
+#text-newZealand {
+    position: absolute;
+    margin-top: -375px;
+    margin-left: 186px;
+    font-size: 25px;
+    background-color: rgba(202, 202, 202, 0.637);
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 28px;
+    width: 125px;
+    height: 27px;
+    border-radius: 10px;
+}
+
+#btn-greenland {
+    height: 280px;
+    width: 280px;
+}
+
+#btn-greenland:hover {
+    height: 283px;
+    width: 283px;
+    cursor: pointer;
+}
+
+#countriesThree {
+    background-image: url(./Imagem/Marrakech\ -\ Marrocos.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+#btn-india {
+    z-index: 1;
+    position: absolute;
+    margin-top: -310px;
+    margin-left: 890px;
+    height: 270px;
+    width: 315px;
+}
+
+#btn-india:hover {
+    height: 273px;
+    width: 318px;
+    cursor: pointer;
+}
+
+#text-india {
+    position: absolute;
+    margin-top: -375px;
+    margin-left: 987px;
+    font-size: 25px;
+    background-color: rgba(202, 202, 202, 0.637);
+    text-align: center;
+    padding-top: 5px;
+    width: 125px;
+    height: 27px;
+    border-radius: 10px;
+}
+
+#btn-morocco {
+    z-index: 1;
+    position: absolute;
+    margin-top: -310px;
+    padding-left: 155px;
+    height: 240px;
+    width: 220px;
+    font-size: 30px;
+}
+
+#btn-morocco:hover {
+    cursor: pointer;
+    height: 243px;
+    width: 223px;
+}
+
+#text-morocco {
+    position: absolute;
+    margin-top: -375px;
+    margin-left: 186px;
+    font-size: 25px;
+    background-color: rgba(202, 202, 202, 0.637);
+    text-align: center;
+    padding-top: 5px;
+    width: 160px;
+    height: 27px;
+    border-radius: 10px;
+}
+
+#btn-egypt {
+    height: 230px;
+    width: 230px;
+    padding-top: 15px;
+}
+
+#btn-egypt:hover {
+    height: 233px;
+    width: 233px;
+    cursor: pointer;
+}
+
+#monumentsOne {
+    background-image: url(./Imagem/MONUMENTO-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+.questionOne-monuments {
+    background-color: rgba(202, 202, 202, 0.445);
+    text-align: center;
+    margin-left: 40px;
+    width: 455px;
+    height: 598px;
+    padding-top: 60px;
+    font-size: 25px;
+}
+
+#informationMonumentOne, #informationMonumenTwo {
+    width: 700px;
+    height: 80px;
+    font-size: 25px;
+    margin-left: 60px;
+    padding-top: 10px;
+    margin-top: -225px;
+}
+
+#informationMonumenThree {
+    width: 700px;
+    height: 80px;
+    font-size: 25px;
+    margin-left: 470px;
+    padding-top: 10px;
+    margin-top: -440px;
+    text-align: left;
+}
+
+#monumentQuestionOne{
+    margin-top: 60px;
+}
+
+#acropole {
+    margin-left: -120px;
+    margin-top: 20px;
+}
+
+#cristo-redentor {
+    margin-left: -42px;
+    margin-top: 20px;
+}
+
+#duomo {
+    margin-left: -138px;
+    margin-top: 20px;
+}
+
+#buttonMonumentOne, #buttonMonumentTwo, #buttonMonumentThree {
+    height: 30px;
+    width: 40px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 150px;
+    margin-right: -180px;
+}
+
+#buttonMonumentOne:hover #buttonMonumentTwo:hover #buttonMonumentThree:hover {
+    cursor: pointer;
+    color: rgba(197, 197, 197, 0.562);
+}
+
+#monumentsTwo {
+    background-image: url(./Imagem/MONUMENTO-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+#coliseu {
+    margin-left: -120px;
+    margin-top: 20px;
+}
+
+#taj-mahal {
+    margin-left: -87px;
+    margin-top: 20px;
+}
+
+#machu-picch {
+    margin-left: -46px;
+    margin-top: 20px;
+}
+
+#monumentsThree {
+    background-image: url(./Imagem/MONUMENTO-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+#burj-khalifa {
+    margin-left: -160px;
+    margin-top: 20px;
+}
+
+#big-ben {
+    margin-left: -210px;
+    margin-top: 20px;
+}
+
+#empire-state-building {
+    margin-left: -46px;
+    margin-top: 20px;
+}
