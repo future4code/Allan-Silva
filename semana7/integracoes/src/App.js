@@ -1,7 +1,6 @@
 import React from 'react';
 import Register from './components/Register/Register';
 import Lista from './components/Lista/Lista'
-import Details from './components/Details/Details';
 
 
 export default class App extends React.Component {
@@ -10,18 +9,16 @@ export default class App extends React.Component {
   }
 
   changePage = () => {
-    if(this.state.page === 0) {
+    if (this.state.page === 0) {
       return <Register/>
-    } else if(this.state.page === 1) {
+    } else if (this.state.page === 1) {
       return <Lista />
-    } else if (this.state.page === 2) {
-      return <Details />
     }
   }
   
   changeState = () => {
     if (this.state.page === 0) {
-      this.setState({ page: 1 })
+      this.setState({ page: 1})
     } else if (this.state.page === 1) {
       this.setState({ page: 0 })
     }

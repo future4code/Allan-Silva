@@ -53,8 +53,10 @@ export default class Lista extends React.Component {
     render() {
         const userList = this.state.users.map((user) => (
             <div>
-                <li key={user.id}>{user.name}</li>
-                <button onClick={() => this.deleteUser(user.id)}>X</button>
+                <li key={user.id}>
+                    <span>{user.name}</span>
+                    <button onClick={() => this.deleteUser(user.id)}>X</button>
+                </li>
             </div>
         ));
 
