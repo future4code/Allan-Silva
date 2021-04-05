@@ -1,0 +1,143 @@
+html,body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #585F95
+}
+
+#home {
+  height: calc(100% - 100px);
+}
+
+.logo-box {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-box img {
+  height: 90px;
+  width: 240px;
+}
+
+#theme {
+  margin: auto;
+  text-align: center;
+  font-size: 25px;
+  padding: 4px 0px 4px 0px;
+  color: white;
+  background-color: #CD4E00;
+}
+
+.container-square {
+  display: flex;
+  align-items: center;
+  height: calc(100% - 280px);
+  justify-content: center;
+  text-align: center;
+  font-style: italic;
+}
+
+.square {
+  font-size: 25px;
+  padding-top: 20px;
+  width: 135px;
+  height: 95px;
+  text-align: center;
+  margin: 16px 16px 0 16px;
+  color: white;
+}
+
+#squareRed {
+  background-color: #DB6966;
+}
+
+#squareBlue {
+  background-color: #71A0EB;
+}
+
+#squareGreen {
+  background-color: #94C47E;
+}
+
+.contact {
+  display: flex;
+  /* align-items: "Alinha na Vertical */
+  align-items: center;
+  /* justify-content: "Alinha na Horizontal" */
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  height: 100px;
+  background-color: #D4D9D0;
+}
+
+.question-input {
+  width: 300px;
+  height: 35px;
+  font-size: 13px;
+}
+
+#button {
+  width: 70px;
+  height: 41px;
+  font-size: 15px;
+  margin-left: 0px;
+  text-align: center;
+  background-color:  #CD4E00;
+  color: white;
+  border-style: none;
+}
+
+#button,#squareGreen,#squareBlue,#squareRed:hover {
+  cursor: pointer;
+}
+
+.main {
+    display: flex;
+    height: 68px;
+    flex-wrap: wrap;
+}
+
+.main p {
+    margin: 0;
+}
+
+.message-box {
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.message-text {
+    /* align-self: flex-end; */
+    width: 470px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CD4E00;
+    color: white;
+}
+
+.class-2020 {
+    width: 100%; 
+    display: flex; 
+    align-items: flex-end; 
+    justify-content: flex-end;
+}
+
+#text {
+  /* align-self: flex-end; */
+  /* text-align: right; */
+  font-size: 15px;
+  padding-right: 10px;
+  font-style: italic;
+  color: #D4D9D0;
+}
