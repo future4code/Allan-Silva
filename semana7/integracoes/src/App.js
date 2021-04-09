@@ -12,6 +12,7 @@ export default class App extends React.Component {
     if(this.state.page === 0) {
       return <Register/>
     } else if(this.state.page === 1) {
+
       return <Lista />
     }
   }
