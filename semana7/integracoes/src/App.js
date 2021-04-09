@@ -9,16 +9,17 @@ export default class App extends React.Component {
   }
 
   changePage = () => {
-    if (this.state.page === 0) {
+    if(this.state.page === 0) {
       return <Register/>
-    } else if (this.state.page === 1) {
+    } else if(this.state.page === 1) {
+
       return <Lista />
     }
   }
   
   changeState = () => {
     if (this.state.page === 0) {
-      this.setState({ page: 1})
+      this.setState({ page: 1 })
     } else if (this.state.page === 1) {
       this.setState({ page: 0 })
     }
