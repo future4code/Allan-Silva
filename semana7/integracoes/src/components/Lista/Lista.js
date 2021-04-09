@@ -30,33 +30,30 @@ export default class Lista extends React.Component {
     }
 
     deleteUser = (idUser) => {
-        if(window.confirm("Tem certeza que deseja apagar?")) {
-            axios
-                .delete(
-                    `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${idUser}`,
-                    {
-                        headers: {
-                            Authorization: "allan-silva-cruz"
-                        }
+
+        axios
+            .delete(
+                `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${idUser}`,
+                {
+                    headers: {
+                        Authorization: "allan-silva-cruz"
                     }
-                )
-                .then((res) => {
-                    alert("Apagado com sucesso!")
-                    this.getUser()
-                })
-                .catch((err) => {
-                    alert("Erro ao apagar o usuario!")
-                });
-        }
+                }
+            )
+            .then((res) => {
+                this.getUser()
+                alert("Tem certeza que deseja apagar")
+            })
+            .catch((err) => {
+                alert("Erro ao apagar o usuario")
+            });
     }
 
     render() {
         const userList = this.state.users.map((user) => (
             <div>
-                <li key={user.id}>
-                    <span>{user.name}</span>
-                    <button onClick={() => this.deleteUser(user.id)}>X</button>
-                </li>
+                <li key={user.id}>{user.name}</li>
+                <button onClick={() => this.deleteUser(user.id)}>X</button>
             </div>
         ));
 
