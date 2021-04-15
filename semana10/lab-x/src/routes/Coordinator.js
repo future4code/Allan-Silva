@@ -6,6 +6,10 @@ export const goToLogin = (history) => {
     history.push("/login");
 };
 
+export const goToLogout = (history) => {
+    history.replace("/login");
+};
+
 export const goToApplication = (history) => {
     history.push("/trips/application");
 };

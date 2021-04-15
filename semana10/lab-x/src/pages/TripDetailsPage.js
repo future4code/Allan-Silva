@@ -1,10 +1,28 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { goToLogin } from "../routes/Coordinator"
+import { goToLogout } from "../routes/Coordinator"
 
 
 
 const TripDetailsPage = () => {
+
+    useEffect(() => {
+        getTripDetail()
+    })
+
+    const getTripDetail = (id) => {
+
+        const token = window.localStorage.getItem("token")
+
+        axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/allan-silva-cruz/trip/${id}`, {
+            headers: {
+                Authorization: token
+            }
+        })
+    }
+
+
     const history = useHistory();
 
     return (
@@ -13,7 +31,7 @@ const TripDetailsPage = () => {
             {/* <button onClick={() => goToAdmin(history)}>Painel admin</button> */}
             {/* <button onClick={() => goToCreateTrip(history)}>Criar Viagem</button> */}
             <button onClick={history.goBack}>Voltar</button>
-            <button onClick={() => goToLogin(history)}>Logout</button>
+            <button onClick={() => goToLogout(history)}>Logout</button>
         </>
     );
 };
