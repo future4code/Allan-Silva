@@ -1,11 +1,11 @@
 import React from 'react'
 
 const LoginPage = () => {
-    return (
+    return(
         <div>
-            <p>Hello World</p>
+
         </div>
-    );
+    )
 }
 
 export default LoginPage;

@@ -1,27 +1,32 @@
 import React  from 'react'
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import LoginPage from '../pages/LoginPage'
+import SingUpPage from '../pages/SingUpPage'
+import FeedPage from '../pages/FeedPage'
+import PostPage from '../pages/PostPage'
 
 const Router = () => {
     return(
         <BrowserRouter>
-        <Switch>
-            <Router>
+            <Switch>
+                <Route exact path="/login">
+                    <LoginPage/>
+                </Route>
 
-            </Router>
+                <Route exact path="/cadastro">
+                    <SingUpPage />
+                </Route>
 
-                <Router>
+                <Route exact path="/feed">
+                    <FeedPage />
+                </Route>
 
-                </Router>
-
-                <Router>
-
-                </Router>
-
-                <Router>
-
-                </Router>
-        </Switch>
+                <Route exact path="/post/:id">
+                    <PostPage />
+                </Route>
+            </Switch>
         </BrowserRouter>
     )
 }
+
+export default Router;
