@@ -3,7 +3,7 @@ import React from 'react'
 const FeedPage = () => {
     return (
         <div>
-
+            <h1>Feed</h1>
         </div>
     )
 }

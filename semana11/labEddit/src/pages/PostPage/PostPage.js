@@ -1,11 +1,11 @@
 import React from 'react'
 
-const SingUpPage = () => {
+const PostPage = () => {
     return (
         <div>
-
+            <h1>Post</h1>
         </div>
     )
 }
 
-export default SingUpPage;
+export default PostPage;
