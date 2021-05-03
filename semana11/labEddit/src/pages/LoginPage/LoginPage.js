@@ -1,33 +1,30 @@
 import React from 'react'
-import { TextField } from '@material-ui/core'
+import { Button, TextField } from '@material-ui/core'
 import { useHistory } from 'react-router'
 import { goToSingUp } from '../../routes/Coordinator'
 import useForm from '../../hooks/useForm'
-import axios from 'axios'
-import { baseUrl } from '../../constants/url'
+import { login } from '../../services/user'
+import { ButtonContainer, InputsContainer, LoginFormContainer } from './style'
 
-const LoginPage = () => {
+
+const LoginPage = ({ setRightButtonText }) => {
+
+
     const history = useHistory()
 
     const [form, onChange, clear] = useForm({email: "", password: ""})
 
     const onSubmitForm = (event) => {
         event.preventDefault()
-    }
-
-    const body = {
-        "email": "pedro.darvas@gmail.com",
-        "password": "qwerty"
-    }
-
-    const login = () => {
-        axios.post(`${baseUrl}/login`, body, form)
+        login(form, clear, history, setRightButtonText)
     }
 
     return(
         <div>
             <h1>Login</h1>
+            <LoginFormContainer>
             <form onSubmit={onSubmitForm}>
+                <InputsContainer>
                 <TextField 
                     label={'Email' }
                     type={'email'}
@@ -36,6 +33,7 @@ const LoginPage = () => {
                     onChange={onChange}
                     variant={'outlined'}
                     margin={'normal'}
+                    fullWidth
                     required
                 />
                 <TextField
@@ -46,11 +44,22 @@ const LoginPage = () => {
                     onChange={onChange}
                     variant={'outlined'}
                     margin={'normal'}
+                    fullWidth
                     required
                 />
-            <button  type={"submit"}>Entrar</button>
+                </InputsContainer>
+                    <ButtonContainer>
+            <Button  
+            type={"submit"}
+            fullWidth
+            >Entrar</Button>
+            <Button 
+            onClick={() => goToSingUp(history)}
+            fullWidth
+            >Cadastre-se</Button>
+                    </ButtonContainer>
             </form>
-            <button onClick={() => goToSingUp(history)}>Cadastro</button>
+            </LoginFormContainer>
         </div>
     )
 }

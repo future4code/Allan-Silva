@@ -2,22 +2,30 @@ import React from 'react'
 import { useHistory } from 'react-router';
 import { goToFeed } from '../../routes/Coordinator';
 import useForm from '../../hooks/useForm'
-import { TextField } from '@material-ui/core'
+import { Button, TextField } from '@material-ui/core'
+import useUnprotectedPage from '../../hooks/useUnprotectedPage';
+import { singUp } from '../../services/user';
+import { ButtonContainer, InputsContainer, SingUpFormContainer } from './style';
 
-const SingUpPage = () => {
+const SingUpPage = ({ setRightButtonText }) => {
+    useUnprotectedPage()
+
     const history = useHistory()
 
     const [form, onChange, clear] = useForm({name: "", email: "", password: "" })
 
     const onSubmitForm = (event) => {
         event.preventDefault()
+        singUp(form, clear, history, setRightButtonText)
     }
 
 
     return (
         <div>
             <h1>Cadastre-se</h1>
+            <SingUpFormContainer>
             <form onSubmit={onSubmitForm}>
+                <InputsContainer>
                 <TextField
                     label={'Nome Do Usuario'}
                     type={'text'}
@@ -26,6 +34,7 @@ const SingUpPage = () => {
                     onChange={onChange}
                     variant={'outlined'}
                     margin={'normal'}
+                    fullWidth
                     required
                 />
                 <TextField
@@ -36,6 +45,7 @@ const SingUpPage = () => {
                     onChange={onChange}
                     variant={'outlined'}
                     margin={'normal'}
+                    fullWidth
                     required
                 />
                 <TextField
@@ -46,10 +56,13 @@ const SingUpPage = () => {
                     onChange={onChange}
                     variant={'outlined'}
                     margin={'normal'}
+                    fullWidth
                     required
                 />
-            <button type={"submit"} onClick={() => goToFeed(history)} >Cadastrar</button>
+                </InputsContainer>
+                <Button fullWidth type={"submit"} onClick={() => goToFeed(history)} >Cadastrar</Button>
             </form>
+            </SingUpFormContainer>
         </div>
     )
 }

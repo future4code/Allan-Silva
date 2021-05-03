@@ -1,22 +1,30 @@
 import React  from 'react'
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import { Switch, Route} from 'react-router-dom'
 import LoginPage from '../pages/LoginPage/LoginPage'
 import SingUpPage from '../pages/SingUpPage/SingUpPage'
 import FeedPage from '../pages/FeedPage/FeedPage'
 import PostPage from '../pages/PostPage/PostPage'
-import Header from '../components/header/Header'
+import styled from 'styled-components'
 
-const Router = () => {
+const Router = ({ setRightButtonText }) => {
+    
+    const ScreenContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10vh;
+    `
+    
     return(
-        <BrowserRouter>
-            <Header />
+        <ScreenContainer>
             <Switch>
                 <Route exact path="/login">
-                    <LoginPage/>
+                    <LoginPage setRightButtonText={setRightButtonText} />
                 </Route>
 
                 <Route exact path="/cadastro">
-                    <SingUpPage />
+                    <SingUpPage setRightButtonText={setRightButtonText} />
                 </Route>
 
                 <Route exact path="/feed">
@@ -27,7 +35,7 @@ const Router = () => {
                     <PostPage />
                 </Route>
             </Switch>
-        </BrowserRouter>
+        </ScreenContainer>
     )
 }
 
