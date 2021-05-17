@@ -1,0 +1,15 @@
+{
+  "name": "aula-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercicios.js",
+  "scripts": {
+    "start": "node ./exercicios.js"
+  },
+  "author": "Allan Silva",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^15.3.0",
+    "typescript": "^4.2.4"
+  }
+}
