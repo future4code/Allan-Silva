@@ -18,23 +18,36 @@
 type pessoa = {
     nome: string,
     idade: number,
-    corFavorita: string
+    corFavorita: COLORS
 }
+
+//D - 
+enum COLORS {
+    VIOLETA = "violeta",
+    ANIL = "anil",
+    AZUL = "azul",
+    VERDE = "verde",
+    AMARELO = "amarelo",
+    LARANJA = "laranja",
+    VERMELHO = "vermelho"
+}
+
+//////////////////////////////
 
 const joao: pessoa = {
     nome: "Joao Alves",
     idade: 28,
-    corFavorita: "laranja"
+    corFavorita: COLORS.VIOLETA
 }
 
 const paulo: pessoa = {
     nome: "Paulo Otavio",
     idade: 22,
-    corFavorita: "azul"
+    corFavorita: COLORS.LARANJA
 }
 
 const allan: pessoa = {
     nome: "Allan Silva",
     idade: 18,
-    corFavorita: "vermelho"
+    corFavorita: COLORS.VERMELHO
 }
