@@ -1,0 +1,73 @@
+# Banco de Dados e Introdução a SQL <h1>
+
+### Exercicios 1 -
+a. 
+VARCHAR representa uma quantidade de caracteres.
+DATE representa a data 
+b.
+Foram carregadas tabelas com devidas informações do database e tables criadas
+c.
+Retorna uma tabela com as colunas
+
+
+### Exercicios 2 -
+
+a.
+```
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "002", 
+  "Glória Pires",
+  1200000,
+  "1963-08-23", 
+  "female"
+);
+```
+b.
+ Error Code: 1062. Duplicate entry '002' for key 'PRIMARY'
+Código de erro: 1062. Entrada duplicada '002' para a chave 'PRIMÁRIA' 
+
+O codigo reconheceu que havia id duplicados
+
+c.
+Error Code: 1136. Column count doesn't match value count at row 1
+Código de erro: 1136. A contagem de colunas não corresponde à contagem de valores na linha 1
+
+Esta sendo passando uma quantidade de colunas a qual não foram definidas
+
+d.
+Error Code: 1364. Field 'name' doesn't have a default value
+Código de erro: 1364. O campo 'nome' não tem um valor padrão
+
+O campo de nome não tinha sido atribuido a coluna
+
+e.
+Error Code: 1292. Incorrect date value: '1950' for column 'birth_date' at row 1
+Código de erro: 1292. Valor de data incorreto: '1950' para a coluna 'birth_date' na linha 1
+
+A data de aniversario deve ser passada da forma padrão de data "YYYY-MM-DD" dentro de strings
+
+f.
+- - - - - - - - 
+
+### Exercicios 3 -
+
+a.
+
+SELECT * FROM `cruz-2114318-allan-silva`.Actor WHERE gender = "female";
+
+b.
+
+SELECT salary FROM `cruz-2114318-allan-silva`.Actor WHERE name = "Tony Ramos";
+
+c.
+
+Retornou uma tabela vazia
+
+d.
+
+SELECT id, name, salary FROM `cruz-2114318-allan-silva`.Actor WHERE salary <= 500000;
+
+e.
+
+
