@@ -69,5 +69,117 @@ d.
 SELECT id, name, salary FROM `cruz-2114318-allan-silva`.Actor WHERE salary <= 500000;
 
 e.
+Error Code: 1054. Unknown column 'nome' in 'field list'
+Código de erro: 1054. Coluna desconhecida 'nome' na 'lista de campos'
+
+SELECT id, name from Actor WHERE id = "002"
 
 
+### Exercicios 4 -
+
+a.
+
+Ela ira primeiramente verificar os nomes com as iniciais A ou J depois os salarios acima de 300000
+
+b.
+
+SELECT * FROM Actor
+WHERE (name NOT LIKE "A%") AND salary > 350000
+
+c.
+
+SELECT * FROM Actor
+WHERE name LIKE "%G%" OR name LIKE "%g%"
+
+d.
+
+SELECT * FROM Actor
+WHERE (name LIKE "%G%" OR name LIKE "%g%" OR name LIKE "%A%" OR name LIKE "%a%") AND salary BETWEEN 350000 AND 900000
+
+
+### Exercicios 5 -
+
+a.
+```
+CREATE TABLE movie (
+	id VARCHAR(255) PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    sinopse TEXT(255) NOT NULL,
+    release_date DATE NOT NULL,
+    assessment INT(10) NOT NULL
+);
+```
+b.
+c.
+d.
+e.
+
+INSERT INTO movie (id, title, sinopse, release_date, assessment)
+VALUES (
+	"001",
+    "Se Eu Fosse Você",
+    "Cláudio e Helena são casados há muitos anos e enfrentam a rotina do casamento. 
+    Um dia eles são atingidos por um fenômeno inexplicável e trocam de corpos",
+    "2006-01-06",
+    7
+),(
+	"002",
+    "Doce de mãe",
+    "Dona Picucha, uma animada senhora de 85 anos, sempre causa grandes confusões. A vida dela e dos seus quatro filhos sofre uma 
+    reviravolta depois que Zaida, empregada e amiga de Dona Picucha, anuncia que vai se casar e não poderá mais morar com ela",
+    "2012-12-27",
+    10
+),(
+	"003",
+    "Dona Flor e Seus Dois Maridos",
+    "Dona Flor é uma sedutora professora de culinária casada com Vadinho,
+    que só quer saber de farras e jogatina nas boates. A vida de abusos acaba por acarretar sua morte precoce.",
+    "2017-11-02",
+    8
+),(
+	"004",
+    "MINHA MÃE É UMA PEÇA - O FILME",
+	"Dona Hermínia é uma mulher de meia idade, divorciada do marido, que a trocou por uma mais jovem. Hiperativa,
+    ela não larga o pé de seus filhos Marcelina e Juliano, que já estão bem grandinhos. Um dia, após descobrir que eles a consideram uma chata,
+    resolve sair de casa sem avisar ninguém, deixando todos, de alguma forma, preocupados com o que teria acontecido.
+    Mal sabem eles que a mãe foi visitar a querida tia Zélia para desabafar suas tristezas do presente e recordar os bons tempos do passado.",
+    "2013-06-21",
+    10
+);
+
+### Exercicios 6 -
+
+a.
+
+SELECT id, title, assessment FROM `cruz-2114318-allan-silva`.movie WHEN id = "002";
+
+b.
+
+SELECT * FROM `cruz-2114318-allan-silva`.movie WHEN title = "MINHA MÃE É UMA PEÇA - O FILME";
+
+c.
+
+SELECT id, title, sinopse FROM `cruz-2114318-allan-silva`.movie WHEN assessment >= 7 ;
+
+
+
+### Exercicios 7 -
+
+a.
+
+SELECT * FROM `cruz-2114318-allan-silva`.movie WHEN title LIKE = "%vida%";
+
+b.
+
+SELECT * FROM `cruz-2114318-allan-silva`.movie WHEN title LIKE = "%mãe%" OR sinopse LIKE = "%mãe%";
+
+c.
+
+SELECT * FROM MOVIE WHERE release_date < "2020-05-24";
+
+d.
+
+SELECT * FROM MOVIE
+WHERE release_date < "2020-05-24" AND 
+      (title LIKE "%Dona%" OR
+      synopsis LIKE "%Dona%") AND rating > 7;
