@@ -1,0 +1,20 @@
+###Introdução a Autenticação
+
+###Exercicio 1
+
+a. Na minha opinição a questão da utilização de string acaba sendo uma forma mais segura pela abrangencia de caracteres diferente de numeros que poderiam ser facilmente decodificados.
+
+
+###Exercicio 2
+
+a. Uma const com o valor de "User" é criada, é feito a conexão com o banco de dados e é criado uma função que insere os valores do id, email e senha criando uma coluna de usuario na Tabela já criada anteriormente.
+b.
+```
+
+CREATE TABLE User (
+    id VARCHAR(255) PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+```
