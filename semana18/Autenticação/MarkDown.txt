@@ -18,3 +18,7 @@ CREATE TABLE User (
 );
 
 ```
+
+###Exercicio 3
+
+a. Simboliza que independente ira retornar uma string.
