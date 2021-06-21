@@ -1,0 +1,18 @@
+POST  http:localhost:3003/users/signup
+
+{
+    "name": "allan",
+    "email": "allansousa7@gmail.com",
+    "password": "2525"
+}
+###
+
+POST http:localhost:3003/users/login
+
+###
+
+POST http:localhost:3003/posts/create
+
+###
+
+GET http:localhost:3003/posts/:id
