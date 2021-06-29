@@ -1,0 +1,12 @@
+### Criptografia e User Roles
+
+# Exercicio1
+
+a. 
+Round é um cost que é utilizado para o atraso dentre o processamento de uma senha.
+Salt é uma string equivalente a 22 caracteres aleatorios antes da criação do hash.
+É recomendado o valor de 12 que ira causar no atraso que tanto ira dificultar uma possivel tentativa de ataque quanto não sera incoveniente ao usuario.
+
+# Exercicio2
+
+a.cadastro, devido a possiveis novas criações de senhas.
