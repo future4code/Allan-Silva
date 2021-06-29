@@ -1,0 +1,11 @@
+{
+  "name": "aula-node",
+  "version": "1.0.0",
+  "description": "Lista de tarefa",
+  "main": "exercicio3.js",
+  "scripts": {
+    "start": "node ./exercicio3.js"
+  },
+  "author": "Allan Silva",
+  "license": "ISC"
+}
