@@ -1,0 +1,260 @@
+#Aprofundamento SQL <h1>
+SET SQL_SAFE_UPDATES = 0;
+### Exercicios 1 -
+
+a.
+
+Eliminaria a coluna de salary da tabela
+
+b.
+
+Mudaria o nome de gender para sex com um string total de 6 caracteres
+
+c.
+
+Permaneceria com o nome de gender mas com um string  total de 255 caracteres
+
+d.
+```
+
+ALTER TABLE Actor CHANGE gender gender VARCHAR(100);
+
+```
+
+### Exercicios 2 -
+
+a.
+```
+
+UPDATE Actor
+SET
+	name = "Moacyr Franco",
+	birth_date = "1976-01-21"
+WHERE id = "003";
+
+```
+b.
+```
+
+UPDATE Actor
+SET
+	name = "JULIANA PAES"
+WHERE name = "Juliana Paes";
+
+```
+c.
+```
+
+UPDATE Actor
+SET
+	name = "Fernanda Montenegro",
+	birth_date = "2018-12-10",
+    	salary = 650000,
+    	gender = "female"
+WHERE id = "005";
+
+```
+d.
+```
+UPDATE Actor
+SET
+	name = "Moacyr Franco",
+	birth_date = "1976-01-21"
+WHERE id = "invalid";
+
+```
+É apresentado que o UPDATE foi executado com sucesso
+
+
+
+### Exercicios 3 -
+
+a.
+```
+DELETE FROM Actor WHERE name = "Fernanda Montenegro"
+```
+b.
+```
+
+DELETE FROM Actor WHERE gender = "male" AND salary > 1000000
+
+```
+
+
+
+### Exercicios 4 -
+
+a.
+```
+
+SELECT MAX(salary) FROM Actor 
+
+```
+b.
+```
+
+SELECT MIN(salary) FROM Actor WHERE gender = "female"
+
+```
+c.
+```
+
+SELECT COUNT(*) FROM Actor WHERE gender = "female"
+
+```
+d.
+```
+
+SELECT SUM(salary) FROM Actor
+
+```
+
+
+
+### Exercicios 5 -
+
+a.
+
+Ele retornou a quantidade e as possibilidades de gender
+
+b.
+```
+
+SELECT id, name FROM Actor ORDER BY name DESC
+
+```
+c.
+```
+
+SELECT * FROM Actor ORDER BY salary 
+
+```
+d.
+```
+
+SELECT * FROM Actor ORDER BY salary DESC LIMIT3
+
+```
+e.
+```
+
+SELECT AVG(salary), gender FROM Actor ORDER BY gender
+
+```
+
+### Exercicios 6 -
+
+a.
+```
+
+ALTER TABLE movie
+ADD playing_limit_date DATE;
+
+```
+b.
+```
+
+ALTER TABLE movie
+CHANGE rating rating FLOAT NOT NULL;
+
+```
+c.
+```
+
+UPDATE movie
+SET 
+	playing_limit_date = "2021-06-11"
+WHERE id = "001";
+
+UPDATE movie
+SET 
+	playing_limit_date = "2020-12-02"
+WHERE id = "002";
+
+```
+d.
+```
+
+DELETE FROM movie WHERE id = "001";
+
+UPDATE movie
+SET
+	sinopse = "Filme Não Mais Listado"
+WHERE id = "001";
+
+```
+
+Foi apagado e atualizado com sucesso sendo 
+que na leitura da query não retornava a 
+sinopse atualizada por ela estar apagada
+
+
+### Exercicios 7 -
+
+a.
+```
+
+SELECT COUNT(rating > 7.5) FROM movie;
+
+```
+b.
+```
+
+SELECT AVG(rating) FROM movie;
+
+```
+c.
+```
+
+SELECT COUNT(*) FROM movie WHERE playing_limit_date > CURDATE();
+
+```
+d.
+```
+
+SELECT COUNT(*) FROM movie WHERE playing_limit_date > CURDATE();
+
+```
+e.
+```
+
+SELECT MAX(rating) FROM movie;
+
+```
+f.
+```
+
+SELECT MIN(rating) FROM movie;
+
+```
+
+
+
+### Exercicios 8 -
+
+a.
+```
+
+SELECT * FROM movie ORDER BY title ASC;
+
+```
+b.
+```
+
+SELECT * FROM movie ORDER BY title DESC LIMIT 5
+
+```
+c.
+```
+
+SELECT * FROM Movie 
+WHERE release_date < CURDATE() ORDER BY release_date DESC LIMIT 3;
+
+```
+d.
+```
+
+SELECT * FROM movie ORDER BY rating DESC LIMIT 3
+
+```
+
